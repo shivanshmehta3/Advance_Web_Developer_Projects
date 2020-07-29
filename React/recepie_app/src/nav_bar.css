@@ -1,0 +1,38 @@
+.top {
+	display: flex;
+	justify-content: space-between;
+	background: #2F4F4F;
+	flex-wrap: wrap;
+}
+
+.leftSection {
+	display: flex;
+	flex-direction: column;
+	min-height: 40px;
+	justify-content: center;
+}
+.rightSection{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 300px;
+	min-height: 40px;
+	min-width: 280px;
+}
+
+.navButton{
+	display: flex;
+	justify-content: space-between;
+}
+
+h1{
+	margin-left: 10px;
+	color: #f5f5f5;
+	font-size: 25px;
+}
+
+button {
+	background: #2F4F4F;
+	border: 0px;
+	color: #f5f5f5;
+}
