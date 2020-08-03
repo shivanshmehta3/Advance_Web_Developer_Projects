@@ -13,7 +13,6 @@ class App extends Component {
 			e.preventDefault();
 			var todos = [...this.state.todos, this.state.newTodo];
 			this.setState({todos, newTodo:''});
-			
 		}
 		this.onInputChange = (e) =>{
 			this.setState({...this.state.todos, newTodo: e.target.value});
@@ -36,7 +35,7 @@ class App extends Component {
 					</form>
 					<ul>{todoList}</ul>
 				</div>
-			</div>	 
+			</div>
 		);
 	}
 }

@@ -1,0 +1,45 @@
+.RecepieForm{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+.Form{
+	display: flex;
+	flex-direction: column;
+	width: 31%;
+	margin: 10px;
+	background: lightgray;
+	border: 10px solid #2F4F4F;
+	border-radius: 5px;
+	padding: 12px;
+}
+.CloseButton{
+	color:#4b4b4b;
+	border: 0px;
+	background: lightgray;
+	align-self: flex-end;
+}
+.InputDiv{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.InstructionsInput{
+	width: 100%;
+}
+.BlueButton{
+	align-self: flex-end;
+	color: white;
+	border: 0px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	background: #2F4F4F;
+	border-radius: 3px;
+}
+input{
+	width: 100%;
+	margin-left: 12px;
+}
+label{
+	white-space: nowrap;
+}

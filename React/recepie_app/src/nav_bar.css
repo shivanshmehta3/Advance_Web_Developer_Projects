@@ -20,7 +20,7 @@
 	min-width: 280px;
 }
 
-.navButton{
+.navButtonsDiv{
 	display: flex;
 	justify-content: space-between;
 }
@@ -31,7 +31,7 @@ h1{
 	font-size: 25px;
 }
 
-button {
+.navButton {
 	background: #2F4F4F;
 	border: 0px;
 	color: #f5f5f5;
