@@ -1,0 +1,14 @@
+{
+  "name": "d3",
+  "version": "1.0.0",
+  "description": "this package contains D3 related projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shivansh Mehta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
