@@ -32,8 +32,14 @@ d3.select('#reset')
 	})
 function displayResult(text, displayFlag){
 	arr = countFrequencies(text);
+	var svgHeight = 300;
+	var svgWidth = 800;
+	var barPadding = 10;
+	var barWidth = (svgWidth / arr.length) - barPadding;
 	
 	var existingLetterSel = d3.select('#letters')
+		.attr('height', svgHeight)
+		.attr('width', svgWidth)
 		.selectAll('.letter')
 		.classed('new', false)
 		.data(arr, function(d){
@@ -59,21 +65,36 @@ function displayResult(text, displayFlag){
 	existingLetterSel
 		.exit()
 		.remove()
-	
-	existingLetterSel
+	var enterSel = existingLetterSel
 		.enter()
-		.append('div')
+		.append('g')
 			.classed('letter', true)
-			.classed('new', true)
-			.style('width', '20px')
-			.style('margin-right', '5px')
-			.style('line-height', '20px')
+			.classed('new', true);
+	enterSel.append('rect');
+	enterSel.append('text');
+	enterSel.merge(existingLetterSel)
+			.select('rect')
+			.attr('x', function(d, i){
+				return i * (barWidth + barPadding);
+			})
+			.attr('y', function(d){
+				return svgHeight - (d.count * 20);
+			})
+			.attr('width', barWidth)
+			.attr('height', function(d){
+				return d.count * 20;
+			})
+	enterSel.merge(existingLetterSel)
+			.select('text')
+			.attr('text-anchor', 'middle')
+			.attr('x', function(d, i){
+				return (i * (barWidth + barPadding)) + (barWidth/2);
+			})
+			.attr('y', function(d){
+				return svgHeight - ((d.count * 20) + 5);
+			})
 			.text(function(d){
 				return d.character;
-			})
-		.merge(existingLetterSel)
-			.style('height', function(d){
-				return d.count * 20 + 'px';
 			})
 
 }

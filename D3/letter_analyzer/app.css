@@ -34,14 +34,10 @@ form > button:hover {
   width: 800px;
 }
 
-.letter {
-  display: inline-block;
-  text-align: center;
-  background-color: #ffc800;
-  vertical-align: bottom;
+.letter rect{
+  fill: #ffc800;
 }
 
-.new {
-  font-size: 1.5em;
-  color: #ffffff;
+.new rect{
+	fill: #90EE90;
 }
