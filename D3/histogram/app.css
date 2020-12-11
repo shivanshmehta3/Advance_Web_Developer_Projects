@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+	text-align: center;
+}
+
+header {
+  padding: 40px;
+  background-color: #5a0071;
+  color: white;
+  font-family: sans-serif;
+}
+
+#svg_elem {
+  border-bottom-color: black;	
+  margin: 20px auto 0;
+}
+
