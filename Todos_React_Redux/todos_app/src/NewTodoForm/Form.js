@@ -29,6 +29,7 @@ function handleSubmit(event){
 	event.preventDefault();
 	this.props.actionAdd(this.state.inputValue);
 	event.target.reset();
+	window.history.back();
 }
 	
 function handleChange(event){
