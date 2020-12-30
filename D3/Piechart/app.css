@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+	text-align: center;
+}
+
+header {
+  padding: 40px;
+  background-color: #5a0071;
+  color: white;
+  font-family: sans-serif;
+}
+
+#svg_elem {
+  border-bottom-color: black;	
+  margin: 20px auto 0;
+}
+
+.tooltip {
+	opacity: 0;
+	position: absolute;
+	pointer-events: none;
+	border: 8px solid #5a0071;
+	background-color: white;
+	border-radius: 2px;
+	padding: 2px;
+}
+
+.tooltip:before {
+	content: '  ';
+	border: 12px solid transparent;
+	border-bottom-color: #5a0071;
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	margin-left: -6px;
+}
